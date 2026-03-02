@@ -14,7 +14,7 @@ export default function Profile() {
       <div className="flex items-center gap-4">
         <div className="w-24 h-24 rounded-full overflow-hidden border border-white/10">
           <img
-            src="/profile.jpg"
+            src="/images/perfil.jpeg"
             alt="Carlos Hernandez"
             className="w-full h-full object-cover"
           />

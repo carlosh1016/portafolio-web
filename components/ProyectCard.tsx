@@ -1,56 +1,67 @@
-type ProjectCardProps = {
+interface ProyectProps {
   title: string;
   description: string;
   tech: string[];
-  repoUrl: string;
-  liveUrl?: string;
-};
+  image?: string;       // El "?" hace que la imagen sea opcional
+  link?: string;
+  frontendLink?: string;
+  backendLink?: string;
+}
 
-export default function ProjectCard({
-  title,
-  description,
-  tech,
-  repoUrl,
-  liveUrl,
-}: ProjectCardProps) {
+export default function ProyectCard({ 
+  title, 
+  description, 
+  tech, 
+  image, 
+  link, 
+  frontendLink, 
+  backendLink 
+}: ProyectProps) {
   return (
-    <article className="rounded-xl border border-slate-200 p-6 hover:border-primary transition">
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
+    <div className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[var(--primary)] transition-all duration-300 flex flex-col">
+      {/* Solo se muestra el contenedor de imagen si existe la propiedad 'image' */}
+      {image && (
+        <div className="aspect-video relative overflow-hidden bg-white/10">
+          <img 
+            src={image} 
+            alt={title}
+            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+          />
+        </div>
+      )}
+      
+      <div className="p-6 flex flex-col flex-grow space-y-4">
+        <h3 className="text-xl font-bold">{title}</h3>
+        <p className="text-[var(--muted)] text-sm leading-relaxed">
+          {description}
+        </p>
+        
+        <div className="flex flex-wrap gap-2">
+          {tech.map((t) => (
+            <span key={t} className="text-[10px] uppercase tracking-wider bg-white/10 px-2 py-1 rounded text-[var(--primary)] font-semibold">
+              {t}
+            </span>
+          ))}
+        </div>
 
-      <p className="text-slate-500 text-sm mb-4">
-        {description}
-      </p>
-
-      <ul className="flex flex-wrap gap-2 mb-6">
-        {tech.map((item) => (
-          <li
-            key={item}
-            className="text-xs px-3 py-1 rounded-full bg-slate-100"
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-
-      <div className="flex gap-4 text-sm font-medium">
-        <a
-          href={repoUrl}
-          target="_blank"
-          className="hover:text-primary transition"
-        >
-          Repositorio
-        </a>
-
-        {liveUrl && (
-          <a
-            href={liveUrl}
-            target="_blank"
-            className="hover:text-primary transition"
-          >
-            Ver App
-          </a>
-        )}
+        <div className="pt-4 mt-auto flex flex-wrap gap-4">
+          {link && (
+            <a href={link} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[var(--primary)] hover:underline">
+              Ver Repositorio ↗
+            </a>
+          )}
+          {frontendLink && (
+            <a href={frontendLink} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[var(--primary)] hover:underline">
+              GitHub Frontend ↗
+            </a>
+          )}
+          {backendLink && (
+            <a href={backendLink} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[var(--primary)] hover:underline">
+              GitHub Backend ↗
+            </a>
+          )}
+        </div>
       </div>
-    </article>
+    </div>
   );
 }

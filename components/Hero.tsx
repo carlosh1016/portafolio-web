@@ -11,7 +11,7 @@ export default function Hero() {
         {/* Foto */}
         <div className="w-38 h-38 md:w-50 md:h-50 rounded-full overflow-hidden border border-white/20 shrink-0">
           <img
-            src="/profile.jpg"
+            src="/images/perfil.jpeg"
             alt="Carlos Hernández"
             className="w-full h-full object-cover"
           />

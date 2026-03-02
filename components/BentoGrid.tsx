@@ -1,53 +1,42 @@
 export default function BentoGrid() {
   return (
-    <section id="studies" className="space-y-8">
-      <h2 className="text-3xl font-semibold tracking-tight">
-        Estudios
-      </h2>
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[180px]">
+      {/* Educación - Ocupa 2 columnas */}
+      <div className="md:col-span-2 row-span-1 bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-[var(--primary)] transition-colors">
+        <h3 className="text-sm font-medium text-[var(--muted)] mb-2">Formación</h3>
+        <p className="text-2xl font-semibold">Ingeniería de Sistemas</p>
+        <p className="text-[var(--muted)]">Universidad - En curso 🎓</p>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        {/* Bachiller */}
-        <div className="bg-[var(--card)] rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
-          <p className="text-[var(--muted)]">
-            Bachiller Académico
-          </p>
-          <p className="text-[var(--muted)]">
-            Colegio Agustiniano Norte
-          </p>
-          <span className="text-sm text-[var(--muted)]">
-            2016 – 2021
-          </span>
+      {/* Stack Principal - Ocupa 1 columna pero es más alta */}
+      <div className="md:col-span-1 row-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-[var(--primary)] transition-colors flex flex-col justify-between">
+        <div>
+          <h3 className="text-sm font-medium text-[var(--muted)] mb-4">Tech Stack</h3>
+          <div className="flex flex-wrap gap-2">
+            {["Node.js", "React", "PostgreSQL", "TypeScript", "Tailwind", "Golang", "java", "Javascript", "Linux"].map((tech) => (
+              <span key={tech} className="px-3 py-1 bg-white/10 rounded-full text-xs">
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
+        <p className="text-xs text-[var(--muted)]">Enfoque principal en desarrollo Backend.</p>
+      </div>
 
-        {/* EAN */}
-        <div className="bg-[var(--card)] rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
-          <p className="text-[var(--muted)]">
-            Ingeniería de Sistemas
-          </p>
-          <p className="text-[var(--muted)]">
-            Universidad EAN
-          </p>
-          <span className="text-sm text-[var(--muted)]">
-            2022 – 2026
-          </span>
+      {/* Ubicación o Disponibilidad */}
+      <div className="md:col-span-1 row-span-1 bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-[var(--primary)] transition-colors flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-3xl">🇨🇴</p>
+          <p className="text-sm font-medium mt-2">Colombia</p>
         </div>
+      </div>
 
-        {/* UADE */}
-        <div className="bg-[var(--card)] rounded-2xl p-8 hover:scale-[1.02] transition-transform duration-300">
-          <p className="text-[var(--muted)]">
-            Ingeniería Informática
-          </p>
-          <p className="text-[var(--muted)]">
-            Universidad UADE
-          </p>
-          <span className="text-sm text-[var(--muted)]">
-            2025
-          </span>
-        </div>
-
+      {/* GitHub/Stats rápido */}
+      <div className="md:col-span-1 row-span-1 bg-[var(--primary)]/10 border border-[var(--primary)]/20 rounded-3xl p-8 flex items-center justify-center">
+         <p className="text-center font-medium text-[var(--primary)]">
+           Abierto a nuevas oportunidades laborales
+         </p>
       </div>
     </section>
   );
 }
-
