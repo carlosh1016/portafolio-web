@@ -1,10 +1,9 @@
 import {
-  Phone,
   Mail,
   Github,
   Linkedin,
-  MessageCircle,
 } from "lucide-react";
+import PhoneContact from "./PhoneContact";
 
 export default function Profile() {
   return (
@@ -15,13 +14,13 @@ export default function Profile() {
         <div className="w-24 h-24 rounded-full overflow-hidden border border-white/10">
           <img
             src="/images/perfil.jpeg"
-            alt="Carlos Hernandez"
+            alt="Carlos Julián Hernández"
             className="w-full h-full object-cover"
           />
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold">Carlos Hernández</h2>
+          <h2 className="text-3xl font-bold">Carlos Julián Hernández</h2>
           <p className="text-sm text-[var(--muted)]">
             Estudiante de Ingeniería de Sistemas
           </p>
@@ -37,23 +36,7 @@ export default function Profile() {
       {/* Contacto con iconos */}
       <div className="flex flex-wrap gap-4 pt-2">
 
-        <a
-          href="tel:+573005647040"
-          className="flex items-center gap-2 text-sm hover:text-[var(--primary)] transition-colors"
-        >
-          <Phone size={18} />
-          <span>Llamar</span>
-        </a>
-
-        <a
-          href="https://wa.me/573005647040"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm hover:text-[var(--primary)] transition-colors"
-        >
-          <MessageCircle size={18} />
-          <span>WhatsApp</span>
-        </a>
+        <PhoneContact />
 
         <a
           href="mailto:carlosjher1016@gmail.com"

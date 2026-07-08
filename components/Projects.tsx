@@ -6,11 +6,11 @@ const myProjects = [
     description: "Mi sitio web profesional desarrollado con Next.js y Tailwind CSS para mostrar mi trayectoria y proyectos como desarrollador.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     link: "https://github.com/carlosh1016/portafolio-web",
-    image: "/images/perfil.jpeg" 
+    image: "/images/project-portafolio.svg"
   },
   {
     title: "Cloth Inc",
-    description: "Plataforma integral de E-commerce para una tienda de ropa. Incluye sistema de inventario, gestión de usuarios y procesos de compra.",
+    description: "Proyecto académico desarrollado en una materia de la Universidad UADE, donde practiqué desarrollo full-stack de punta a punta: frontend, backend y bases de datos. Es una plataforma de e-commerce para una tienda de ropa con inventario, gestión de usuarios y procesos de compra. El código está disponible en los repositorios; no cuenta con despliegue en vivo.",
     tech: ["React", "Node.js", "Express", "PostgreSQL"],
     frontendLink: "https://github.com/DiSavoia101/cloth-inc-frontend.git",
     backendLink: "https://github.com/DiSavoia101/cloth-inc-backend.git"
@@ -25,11 +25,22 @@ export default function Projects() {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {myProjects.map((project, index) => (
-          <ProyectCard 
+          <ProyectCard
             key={index}
-            {...project} 
+            {...project}
           />
         ))}
+
+        {/* Tarjeta placeholder para próximo proyecto */}
+        <div className="border-2 border-dashed border-white/15 rounded-2xl p-8 flex flex-col items-center justify-center text-center gap-3 min-h-[220px] hover:border-[var(--primary)]/50 transition-colors">
+          <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-2xl text-[var(--primary)]">
+            +
+          </div>
+          <h3 className="text-lg font-semibold">Próximo proyecto</h3>
+          <p className="text-sm text-[var(--muted)] max-w-xs">
+            En desarrollo — pronto habrá algo nuevo por aquí.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import Experience from "@/components/Experience";
 import Profile from "@/components/Profile";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -26,8 +27,10 @@ export default function Home() {
             <BentoGrid /> 
             
             {/* Sección de proyectos (Portafolio y Cloth Inc) */}
-            <Projects /> 
-            
+            <Projects />
+
+            <Skills />
+
             <Experience />
           </div>
 

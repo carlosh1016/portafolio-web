@@ -22,7 +22,7 @@ export default function About() {
 
       <p className="max-w-3xl text-[var(--muted)] leading-relaxed">
         He trabajado con tecnologías como Go, Java, Node.js, bases de datos
-        relacionales, ciberseguridad detectando anomalias, analisis predictivos y Machine Learning,
+        relacionales, análisis predictivos y Machine Learning,
         y disfruto aprender fundamentos sólidos antes de pasar a soluciones complejas.
       </p>
 

@@ -45,6 +45,13 @@ export default function Navbar() {
         Proyectos
       </a>
       <a
+        href="#skills"
+        className={navLinkClassName}
+        onClick={() => setOpen(false)}
+      >
+        Habilidades
+      </a>
+      <a
         href="#experience"
         className={navLinkClassName}
         onClick={() => setOpen(false)}
@@ -65,7 +72,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-[var(--background)]/70 backdrop-blur supports-[backdrop-filter]:bg-[var(--background)]/60">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex justify-between items-center">
         <a href="#hero" className="font-semibold tracking-tight hover:text-white transition-colors">
-          Carlos Hernández
+          Carlos Julián Hernández
         </a>
 
         <div className="hidden md:flex items-center gap-8">
