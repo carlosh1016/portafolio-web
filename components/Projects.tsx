@@ -2,6 +2,14 @@ import ProyectCard from "./ProyectCard";
 
 const myProjects = [
   {
+    title: "Recibos App",
+    description: "Aplicación web progresiva (PWA) que digitaliza facturas colombianas: se toma una foto del recibo, se preprocesa la imagen y se extrae el texto mediante OCR para exportar los datos a Excel. Funciona 100% offline y sin backend — todo el procesamiento ocurre en el navegador, con almacenamiento local mediante IndexedDB.",
+    tech: ["TypeScript", "Vite", "Tailwind CSS", "Tesseract.js", "Dexie", "ExcelJS"],
+    link: "https://github.com/carlosh1016/Recibos-app",
+    demoLink: "https://recibos-app-beige.vercel.app/",
+    image: "/images/project-recibos.svg"
+  },
+  {
     title: "Portafolio Personal",
     description: "Mi sitio web profesional desarrollado con Next.js y Tailwind CSS para mostrar mi trayectoria y proyectos como desarrollador.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],

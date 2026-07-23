@@ -4,18 +4,20 @@ interface ProyectProps {
   tech: string[];
   image?: string;       // El "?" hace que la imagen sea opcional
   link?: string;
+  demoLink?: string;
   frontendLink?: string;
   backendLink?: string;
 }
 
-export default function ProyectCard({ 
-  title, 
-  description, 
-  tech, 
-  image, 
-  link, 
-  frontendLink, 
-  backendLink 
+export default function ProyectCard({
+  title,
+  description,
+  tech,
+  image,
+  link,
+  demoLink,
+  frontendLink,
+  backendLink
 }: ProyectProps) {
   return (
     <div className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[var(--primary)] transition-all duration-300 flex flex-col">
@@ -45,6 +47,11 @@ export default function ProyectCard({
         </div>
 
         <div className="pt-4 mt-auto flex flex-wrap gap-4">
+          {demoLink && (
+            <a href={demoLink} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[var(--primary)] hover:underline">
+              Ver Demo ↗
+            </a>
+          )}
           {link && (
             <a href={link} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[var(--primary)] hover:underline">
               Ver Repositorio ↗

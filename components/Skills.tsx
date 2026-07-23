@@ -5,17 +5,18 @@ const skillGroups = [
   },
   {
     title: "Datos",
-    items: ["SQL", "n8n", "Power BI", "Google Colab", "Pipelines de datos"],
+    items: ["SQL", "n8n", "Power BI", "Google Colab", "Pipelines de datos", "ETL", "Python para análisis de datos", "Automatización de procesos"],
   },
   {
     title: "Bases de datos",
-    items: ["SQL", "Redshift", "PostgreSQL"],
+    items: ["SQL", "Redshift", "PostgreSQL", "MariaDB", "MongoDB", "MySQL"],
   },
   {
     title: "Herramientas",
     items: [
       "Claude Code",
       "Herramientas de IA",
+      "APIs de IA",
       "Automatizaciones",
       "Docker (básico)",
       "Linux",
