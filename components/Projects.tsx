@@ -2,11 +2,19 @@ import ProyectCard from "./ProyectCard";
 
 const myProjects = [
   {
+    title: "Inspirate Inventory",
+    description: "Sistema de inventario web para una perfumería familiar en Colombia que mezcla fragancias con alcohol en diferentes presentaciones. Backend en Go con más de 75 endpoints, control de stock transaccional, y descuentos automatizados. Frontend en Next.js 16 con React 19, TanStack Query y shadcn/ui, soportando dos roles de usuario. Infraestructura en Supabase, Oracle Cloud y Vercel.",
+    tech: ["Go", "Chi", "Next.js", "React 19", "TypeScript", "PostgreSQL", "Tailwind CSS", "TanStack Query", "Zustand", "shadcn/ui"],
+    link: "https://github.com/carlosh1016/inspirate-inventory",
+    productionLink: "https://inspirate-inventory.vercel.app/",
+    image: "/images/project-inspirate.svg"
+  },
+  {
     title: "Recibos App",
     description: "Aplicación web progresiva (PWA) que digitaliza facturas colombianas: se toma una foto del recibo, se preprocesa la imagen y se extrae el texto mediante OCR para exportar los datos a Excel. Funciona 100% offline y sin backend — todo el procesamiento ocurre en el navegador, con almacenamiento local mediante IndexedDB.",
     tech: ["TypeScript", "Vite", "Tailwind CSS", "Tesseract.js", "Dexie", "ExcelJS"],
     link: "https://github.com/carlosh1016/Recibos-app",
-    demoLink: "https://recibos-app-beige.vercel.app/",
+    productionLink: "https://recibos-app-beige.vercel.app/",
     image: "/images/project-recibos.svg"
   },
   {

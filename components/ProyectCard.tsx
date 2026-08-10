@@ -4,7 +4,7 @@ interface ProyectProps {
   tech: string[];
   image?: string;       // El "?" hace que la imagen sea opcional
   link?: string;
-  demoLink?: string;
+  productionLink?: string;
   frontendLink?: string;
   backendLink?: string;
 }
@@ -15,7 +15,7 @@ export default function ProyectCard({
   tech,
   image,
   link,
-  demoLink,
+  productionLink,
   frontendLink,
   backendLink
 }: ProyectProps) {
@@ -47,9 +47,9 @@ export default function ProyectCard({
         </div>
 
         <div className="pt-4 mt-auto flex flex-wrap gap-4">
-          {demoLink && (
-            <a href={demoLink} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[var(--primary)] hover:underline">
-              Ver Demo ↗
+          {productionLink && (
+            <a href={productionLink} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[var(--primary)] hover:underline">
+              Ver en Producción ↗
             </a>
           )}
           {link && (
