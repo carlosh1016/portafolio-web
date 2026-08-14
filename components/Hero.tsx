@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { Mail, Github, Linkedin } from "lucide-react";
+import PhoneContact from "./PhoneContact";
+import SocialLink from "./ui/SocialLink";
 
 export default function Hero() {
   return (
@@ -35,12 +38,39 @@ export default function Hero() {
 
       </div>
 
-      {/* Subtexto + CTA */}
-      <div className="space-y-6">
-        <p className="max-w-xl text-[var(--muted)] leading-relaxed">
-          Ingeniero de sistemas enfocado en backend, datos y automatización.
-          Construyo pipelines, APIs y sistemas que funcionan.
-        </p>
+      {/* Ubicación + contacto + CTA */}
+      <div id="contact" className="space-y-6 scroll-mt-24">
+        <div>
+          <h4 className="font-medium">Ubicación</h4>
+          <p className="text-[var(--muted)]">Colombia 🇨🇴</p>
+        </div>
+
+        <div className="flex flex-wrap gap-4">
+          <PhoneContact />
+
+          <SocialLink
+            icon={<Mail size={18} />}
+            label="Email"
+            href="mailto:carlosjher1016@gmail.com"
+            ariaLabel="Enviar email"
+          />
+
+          <SocialLink
+            icon={<Github size={18} />}
+            label="GitHub"
+            href="https://github.com/carlosh1016"
+            external
+            ariaLabel="Ver perfil de GitHub"
+          />
+
+          <SocialLink
+            icon={<Linkedin size={18} />}
+            label="LinkedIn"
+            href="https://www.linkedin.com/in/carlos-hernandez-5557a8320/"
+            external
+            ariaLabel="Ver perfil de LinkedIn"
+          />
+        </div>
 
         <div className="flex gap-4">
           <a
