@@ -19,7 +19,7 @@ export default function Navbar() {
   }, [open]);
 
   const navLinkClassName =
-    "relative text-sm font-medium text-[var(--muted)] hover:text-[var(--foreground)] transition-colors focus-visible:outline-none";
+    "relative text-sm font-medium text-[var(--muted)] hover:text-[var(--foreground)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--primary)] focus-visible:outline-offset-4 rounded-sm";
 
   const navLinks = (
     <>

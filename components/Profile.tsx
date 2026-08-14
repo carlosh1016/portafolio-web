@@ -1,21 +1,25 @@
+import Image from "next/image";
 import {
   Mail,
   Github,
   Linkedin,
 } from "lucide-react";
 import PhoneContact from "./PhoneContact";
+import SocialLink from "./ui/SocialLink";
 
 export default function Profile() {
   return (
-    <section id="contact" className="space-y-6">
+    <section id="contact" className="space-y-6 scroll-mt-24">
 
       {/* Foto + Nombre */}
       <div className="flex items-center gap-4">
-        <div className="w-24 h-24 rounded-full overflow-hidden border border-white/10">
-          <img
+        <div className="relative w-24 h-24 rounded-full overflow-hidden border border-white/10">
+          <Image
             src="/images/perfil.jpeg"
             alt="Carlos Julián Hernández"
-            className="w-full h-full object-cover"
+            fill
+            sizes="96px"
+            className="object-cover"
           />
         </div>
 
@@ -38,33 +42,28 @@ export default function Profile() {
 
         <PhoneContact />
 
-        <a
+        <SocialLink
+          icon={<Mail size={18} />}
+          label="Email"
           href="mailto:carlosjher1016@gmail.com"
-          className="flex items-center gap-2 text-sm hover:text-[var(--primary)] transition-colors"
-        >
-          <Mail size={18} />
-          <span>Email</span>
-        </a>
+          ariaLabel="Enviar email"
+        />
 
-        <a
+        <SocialLink
+          icon={<Github size={18} />}
+          label="GitHub"
           href="https://github.com/carlosh1016"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm hover:text-[var(--primary)] transition-colors"
-        >
-          <Github size={18} />
-          <span>GitHub</span>
-        </a>
+          external
+          ariaLabel="Ver perfil de GitHub"
+        />
 
-        <a
+        <SocialLink
+          icon={<Linkedin size={18} />}
+          label="LinkedIn"
           href="https://www.linkedin.com/in/carlos-hernandez-5557a8320/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm hover:text-[var(--primary)] transition-colors"
-        >
-          <Linkedin size={18} />
-          <span>LinkedIn</span>
-        </a>
+          external
+          ariaLabel="Ver perfil de LinkedIn"
+        />
       </div>
     </section>
   );

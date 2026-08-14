@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Card from "./ui/Card";
+
 interface ProyectProps {
   title: string;
   description: string;
@@ -20,24 +23,26 @@ export default function ProyectCard({
   backendLink
 }: ProyectProps) {
   return (
-    <div className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-[var(--primary)] transition-all duration-300 flex flex-col">
+    <Card padded={false} className="group overflow-hidden flex flex-col">
       {/* Solo se muestra el contenedor de imagen si existe la propiedad 'image' */}
       {image && (
         <div className="aspect-video relative overflow-hidden bg-white/10">
-          <img 
-            src={image} 
+          <Image
+            src={image}
             alt={title}
-            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
           />
         </div>
       )}
-      
+
       <div className="p-6 flex flex-col flex-grow space-y-4">
         <h3 className="text-xl font-bold">{title}</h3>
         <p className="text-[var(--muted)] text-sm leading-relaxed">
           {description}
         </p>
-        
+
         <div className="flex flex-wrap gap-2">
           {tech.map((t) => (
             <span key={t} className="text-[10px] uppercase tracking-wider bg-white/10 px-2 py-1 rounded text-[var(--primary)] font-semibold">
@@ -69,6 +74,6 @@ export default function ProyectCard({
           )}
         </div>
       </div>
-    </div>
+    </Card>
   );
 }

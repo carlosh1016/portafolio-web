@@ -1,6 +1,7 @@
 "use client";
 
 import { MessageCircle, Phone } from "lucide-react";
+import SocialLink from "./ui/SocialLink";
 
 /**
  * Contactos telefónicos con el número ofuscado.
@@ -27,25 +28,15 @@ export default function PhoneContact() {
     window.location.href = `tel:+${getNumber()}`;
   };
 
-  const base =
-    "flex items-center gap-2 text-sm hover:text-[var(--primary)] transition-colors cursor-pointer";
-
   return (
     <>
-      <button type="button" onClick={call} className={base} aria-label="Llamar">
-        <Phone size={18} />
-        <span>Llamar</span>
-      </button>
-
-      <button
-        type="button"
+      <SocialLink icon={<Phone size={18} />} label="Llamar" onClick={call} ariaLabel="Llamar" />
+      <SocialLink
+        icon={<MessageCircle size={18} />}
+        label="WhatsApp"
         onClick={openWhatsApp}
-        className={base}
-        aria-label="Escribir por WhatsApp"
-      >
-        <MessageCircle size={18} />
-        <span>WhatsApp</span>
-      </button>
+        ariaLabel="Escribir por WhatsApp"
+      />
     </>
   );
 }

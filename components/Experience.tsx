@@ -20,7 +20,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="space-y-8">
+    <section id="experience" className="space-y-8 scroll-mt-24">
 
       {/* Título */}
       <h2 className="text-3xl font-semibold tracking-tight">

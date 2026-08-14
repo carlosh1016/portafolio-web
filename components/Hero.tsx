@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
@@ -9,11 +11,14 @@ export default function Hero() {
       <div className="flex items-center gap-6 sm:gap-8">
 
         {/* Foto */}
-        <div className="w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden border border-white/20 shrink-0">
-          <img
+        <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden border border-white/20 shrink-0">
+          <Image
             src="/images/perfil.jpeg"
             alt="Carlos Julián Hernández"
-            className="w-full h-full object-cover"
+            fill
+            sizes="(min-width: 768px) 176px, 128px"
+            className="object-cover"
+            priority
           />
         </div>
 
@@ -24,7 +29,7 @@ export default function Hero() {
           </h1>
 
           <h2 className="text-lg sm:text-xl text-[var(--muted)]">
-            Backend Developer · Ingeniero de Datos · Ingeniero de IA · Estudiante de nuevas tecnologías
+            Estudiante de Ingeniería de Sistemas con enfoque en IA, Backend & Datos
           </h2>
         </div>
 

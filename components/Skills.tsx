@@ -1,3 +1,5 @@
+import Card from "./ui/Card";
+
 const skillGroups = [
   {
     title: "Backend",
@@ -33,10 +35,7 @@ export default function Skills() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {skillGroups.map((group) => (
-          <div
-            key={group.title}
-            className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[var(--primary)] transition-colors"
-          >
+          <Card key={group.title}>
             <h3 className="text-sm font-semibold text-[var(--primary)] uppercase tracking-wider mb-4">
               {group.title}
             </h3>
@@ -50,7 +49,7 @@ export default function Skills() {
                 </span>
               ))}
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </section>

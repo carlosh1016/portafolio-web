@@ -35,7 +35,7 @@ const myProjects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-12 space-y-8">
+    <section id="projects" className="py-12 space-y-8 scroll-mt-24">
       <h2 className="text-3xl font-bold border-b border-white/10 pb-4">
         Proyectos Destacados
       </h2>

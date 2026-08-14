@@ -2,12 +2,12 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-[var(--card)] rounded-2xl p-10 space-y-6"
+      className="bg-[var(--card)] rounded-2xl p-10 space-y-6 scroll-mt-24"
     >
 
-      <h3 className="text-2xl font-semibold tracking-tight">
+      <h2 className="text-2xl font-semibold tracking-tight">
         Sobre mí
-      </h3>
+      </h2>
 
       <p className="max-w-3xl text-[var(--muted)] leading-relaxed">
         Soy estudiante de Ingeniería de Sistemas con interés principal en el
