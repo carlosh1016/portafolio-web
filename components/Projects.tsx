@@ -16,20 +16,6 @@ const myProjects = [
     link: "https://github.com/carlosh1016/Recibos-app",
     productionLink: "https://recibos-app-beige.vercel.app/",
     image: "/images/project-recibos.svg"
-  },
-  {
-    title: "Portafolio Personal",
-    description: "Mi sitio web profesional desarrollado con Next.js y Tailwind CSS para mostrar mi trayectoria y proyectos como desarrollador.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    link: "https://github.com/carlosh1016/portafolio-web",
-    image: "/images/project-portafolio.svg"
-  },
-  {
-    title: "Cloth Inc",
-    description: "Proyecto académico desarrollado en una materia de la Universidad UADE, donde practiqué desarrollo full-stack de punta a punta: frontend, backend y bases de datos. Es una plataforma de e-commerce para una tienda de ropa con inventario, gestión de usuarios y procesos de compra. El código está disponible en los repositorios; no cuenta con despliegue en vivo.",
-    tech: ["React", "Node.js", "Express", "PostgreSQL"],
-    frontendLink: "https://github.com/DiSavoia101/cloth-inc-frontend.git",
-    backendLink: "https://github.com/DiSavoia101/cloth-inc-backend.git"
   }
 ];
 
