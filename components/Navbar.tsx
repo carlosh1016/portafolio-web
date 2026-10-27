@@ -3,6 +3,14 @@
 import { useEffect, useId, useState } from "react";
 import { Menu, X } from "lucide-react";
 
+const links = [
+  { href: "#projects", label: "Proyectos" },
+  { href: "#experience", label: "Experiencia" },
+  { href: "#skills", label: "Habilidades" },
+  { href: "#about", label: "Sobre mí" },
+  { href: "#contact", label: "Contacto" },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const panelId = useId();
@@ -21,52 +29,16 @@ export default function Navbar() {
   const navLinkClassName =
     "relative text-sm font-medium text-[var(--muted)] hover:text-[var(--foreground)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--primary)] focus-visible:outline-offset-4 rounded-sm";
 
-  const navLinks = (
-    <>
-      <a
-        href="#about"
-        className={navLinkClassName}
-        onClick={() => setOpen(false)}
-      >
-        Sobre mí
-      </a>
-      <a
-        href="#studies"
-        className={navLinkClassName}
-        onClick={() => setOpen(false)}
-      >
-        Estudios
-      </a>
-      <a
-        href="#projects"
-        className={navLinkClassName}
-        onClick={() => setOpen(false)}
-      >
-        Proyectos
-      </a>
-      <a
-        href="#skills"
-        className={navLinkClassName}
-        onClick={() => setOpen(false)}
-      >
-        Habilidades
-      </a>
-      <a
-        href="#experience"
-        className={navLinkClassName}
-        onClick={() => setOpen(false)}
-      >
-        Experiencia
-      </a>
-      <a
-        href="#contact"
-        className={navLinkClassName}
-        onClick={() => setOpen(false)}
-      >
-        Contacto
-      </a>
-    </>
-  );
+  const navLinks = links.map(({ href, label }) => (
+    <a
+      key={href}
+      href={href}
+      className={navLinkClassName}
+      onClick={() => setOpen(false)}
+    >
+      {label}
+    </a>
+  ));
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-[var(--background)]/70 backdrop-blur supports-[backdrop-filter]:bg-[var(--background)]/60">

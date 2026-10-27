@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { siteUrl } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,9 +13,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://portafolio-web-carlosh.vercel.app";
 const description =
-  "Ingeniero de sistemas enfocado en backend, datos y automatización. Construyo pipelines de datos, APIs y sistemas con Python, SQL, Go y Node.js.";
+  "Backend & Data Engineer. Construyo pipelines de datos, APIs y agentes RAG en producción con Python, SQL, Go y FastAPI."
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -26,6 +26,8 @@ export const metadata: Metadata = {
     "Data Engineering",
     "Ingeniero de Sistemas",
     "Python",
+    "FastAPI",
+    "RAG",
     "SQL",
     "n8n",
     "Power BI",

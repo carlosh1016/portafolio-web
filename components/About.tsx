@@ -1,33 +1,54 @@
+import Card from "./ui/Card";
+import SectionTitle from "./ui/SectionTitle";
+
+const education = [
+  {
+    degree: "Ingeniería de Sistemas",
+    school: "Universidad EAN · Bogotá, Colombia",
+    status: "En curso",
+  },
+  {
+    degree: "Ingeniería Informática",
+    school: "UADE · Argentina",
+    status: "En curso",
+  },
+];
+
 export default function About() {
   return (
-    <section
-      id="about"
-      className="bg-[var(--card)] rounded-2xl p-10 space-y-6 scroll-mt-24"
-    >
+    <section id="about" className="space-y-8 scroll-mt-24">
+      <SectionTitle>Sobre mí</SectionTitle>
 
-      <h2 className="text-2xl font-semibold tracking-tight">
-        Sobre mí
-      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <Card className="md:col-span-3 space-y-4 text-[var(--muted)] leading-relaxed">
+          <p>
+            Me enfoco en backend y datos: diseñar APIs, construir pipelines y
+            llevar sistemas a producción. Mi proyecto de grado, Ecolex, me llevó
+            desde la ingesta de documentos y la búsqueda vectorial hasta el
+            despliegue completo en la nube.
+          </p>
+          <p>
+            Prefiero soluciones simples y mantenibles, y entender bien los
+            fundamentos antes de sumar complejidad.
+          </p>
+        </Card>
 
-      <p className="max-w-3xl text-[var(--muted)] leading-relaxed">
-        Soy estudiante de Ingeniería de Sistemas con interés principal en el
-        desarrollo backend y la construcción de sistemas bien estructurados.
-        Me gusta entender cómo funcionan las cosas por dentro, escribir código
-        claro y priorizar soluciones simples y mantenibles.
-      </p>
-
-      <p className="max-w-3xl text-[var(--muted)] leading-relaxed">
-        Me apasiona seguir aprendiendo y creciendo en el campo del desarrollo de software,
-        o cualquier área relacionada con la ingeniería de sistemas como ciencia de datos,
-        DevOps o seguridad informática, todo con un enfoque práctico y basado en fundamentos sólidos.
-      </p>
-
-      <p className="max-w-3xl text-[var(--muted)] leading-relaxed">
-        He trabajado con tecnologías como Go, Java, Node.js, bases de datos
-        relacionales, análisis predictivos y Machine Learning,
-        y disfruto aprender fundamentos sólidos antes de pasar a soluciones complejas.
-      </p>
-
+        <Card className="md:col-span-2">
+          <h3 className="text-sm font-semibold text-[var(--primary)] uppercase tracking-wider mb-4">
+            Formación
+          </h3>
+          <ul className="space-y-4">
+            {education.map((ed) => (
+              <li key={ed.degree}>
+                <p className="font-semibold leading-tight">{ed.degree}</p>
+                <p className="text-sm text-[var(--muted)]">
+                  {ed.school} · {ed.status}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </Card>
+      </div>
     </section>
   );
 }

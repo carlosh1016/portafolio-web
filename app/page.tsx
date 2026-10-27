@@ -1,30 +1,30 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import BentoGrid from "@/components/BentoGrid";
-import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
 
-      <main className="max-w-6xl mx-auto px-6 pt-28 space-y-24">
+      {/* Orden pensado para reclutadores: primero el trabajo, luego el perfil */}
+      <main className="max-w-6xl mx-auto px-6 pt-32 space-y-28">
         <Hero />
-
-        <About />
-
-        {/* El BentoGrid muestra la formación y el stack antes de los proyectos */}
-        <BentoGrid />
 
         <Projects />
 
+        <Experience />
+
         <Skills />
 
-        <Experience />
+        <About />
+
+        <Contact />
 
         <Footer />
       </main>

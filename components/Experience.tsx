@@ -1,58 +1,71 @@
+import SectionTitle from "./ui/SectionTitle";
+import Tag from "./ui/Tag";
+
 const experiences = [
   {
     role: "Practicante de Data Engineering",
-    company: "Bodytech Colombia · Área de Experiencia al Cliente",
-    period: "Abril 2026 – Octubre 2026 (en curso)",
-    description:
-      "Automatización de pipelines de datos con Python y n8n, consultas SQL sobre Redshift y PostgreSQL, análisis en Google Colab, reportes en Power BI e integración con APIs externas y Google Drive.",
-    stack:
-      "Python · SQL · Redshift · PostgreSQL · n8n · Power BI · Google Colab",
+    company: "Bodytech Colombia · Experiencia al Cliente",
+    period: "Abr 2026 – Actualidad",
+    current: true,
+    highlights: [
+      "Automatización de pipelines de datos con Python y n8n, integrados con APIs externas y Google Drive.",
+      "Consultas SQL sobre Redshift y PostgreSQL y análisis en Google Colab.",
+      "Reportes en Power BI para el área de Experiencia al Cliente.",
+    ],
+    stack: ["Python", "SQL", "Redshift", "PostgreSQL", "n8n", "Power BI"],
   },
   {
-    role: "Desarrollador Backend en Formación",
+    role: "Desarrollador Backend (en formación)",
     company: "Quantum Data Processing",
-    period: "Junio 2024 – Febrero 2025",
-    description:
-      "Desarrollador backend en formación trabajando con el lenguaje Go, con enfoque en bases de datos: administración, migración y soporte. Una experiencia formativa y de aprendizaje.",
-    stack: "Go · PostgreSQL · Linux",
+    period: "Jun 2024 – Feb 2025",
+    current: false,
+    highlights: [
+      "Desarrollo backend con Go.",
+      "Administración, migración y soporte de bases de datos PostgreSQL en entornos Linux.",
+    ],
+    stack: ["Go", "PostgreSQL", "Linux"],
   },
 ];
 
 export default function Experience() {
   return (
     <section id="experience" className="space-y-8 scroll-mt-24">
+      <SectionTitle>Experiencia</SectionTitle>
 
-      {/* Título */}
-      <h2 className="text-3xl font-semibold tracking-tight">
-        Experiencia
-      </h2>
-
-      <div className="space-y-6">
+      <ol className="relative ml-1.5 border-l border-white/10 space-y-12">
         {experiences.map((exp) => (
-          <div
-            key={`${exp.company}-${exp.role}`}
-            className="bg-[var(--card)] border border-white/10 rounded-2xl p-8 space-y-4 hover:scale-[1.02] transition-transform duration-300"
-          >
-            {/* Rol + fechas */}
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-              <h3 className="text-xl font-medium">{exp.role}</h3>
+          <li key={`${exp.company}-${exp.role}`} className="relative pl-8 space-y-3">
+            <span
+              className={`absolute -left-[7px] top-2 h-3 w-3 rounded-full ring-4 ring-[var(--background)] ${
+                exp.current ? "bg-[var(--primary)]" : "bg-white/30"
+              }`}
+              aria-hidden="true"
+            />
+
+            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
+              <h3 className="text-lg font-semibold">{exp.role}</h3>
               <span className="text-sm text-[var(--muted)]">{exp.period}</span>
             </div>
 
-            {/* Empresa */}
-            <p className="text-sm text-[var(--muted)]">{exp.company}</p>
+            <p className="text-sm font-medium text-[var(--primary)]">{exp.company}</p>
 
-            {/* Descripción */}
-            <p className="text-sm text-[var(--muted)] max-w-3xl leading-relaxed">
-              {exp.description}
-            </p>
+            <ul className="space-y-2 text-sm text-[var(--muted)] leading-relaxed max-w-3xl">
+              {exp.highlights.map((h) => (
+                <li key={h} className="flex gap-2">
+                  <span className="text-[var(--primary)]" aria-hidden="true">▹</span>
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
 
-            {/* Tecnologías */}
-            <span className="text-sm text-[var(--primary)]">{exp.stack}</span>
-          </div>
+            <div className="flex flex-wrap gap-2 pt-1">
+              {exp.stack.map((t) => (
+                <Tag key={t}>{t}</Tag>
+              ))}
+            </div>
+          </li>
         ))}
-      </div>
-
+      </ol>
     </section>
   );
 }
