@@ -45,14 +45,14 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/perfil.jpeg",
-        width: 1200,
-        height: 630,
+        width: 358,
+        height: 415,
         alt: "Carlos Julián Hernández",
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Carlos Julián Hernández | Backend & Data Engineering",
     description,
     images: ["/images/perfil.jpeg"],

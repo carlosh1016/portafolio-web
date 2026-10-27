@@ -14,9 +14,11 @@ export default function About() {
         desarrollo backend y la construcción de sistemas bien estructurados.
         Me gusta entender cómo funcionan las cosas por dentro, escribir código
         claro y priorizar soluciones simples y mantenibles.
+      </p>
 
+      <p className="max-w-3xl text-[var(--muted)] leading-relaxed">
         Me apasiona seguir aprendiendo y creciendo en el campo del desarrollo de software,
-        o cualquier área relacionada con la ingeniería de sistemas como ciencia de datos, 
+        o cualquier área relacionada con la ingeniería de sistemas como ciencia de datos,
         DevOps o seguridad informática, todo con un enfoque práctico y basado en fundamentos sólidos.
       </p>
 

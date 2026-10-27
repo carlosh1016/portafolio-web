@@ -31,9 +31,9 @@ export default function Hero() {
             Carlos Julián Hernández
           </h1>
 
-          <h2 className="text-lg sm:text-xl text-[var(--muted)]">
+          <p className="text-lg sm:text-xl text-[var(--muted)]">
             Estudiante de Ingeniería de Sistemas con enfoque en IA, Backend & Datos
-          </h2>
+          </p>
         </div>
 
       </div>
@@ -41,7 +41,7 @@ export default function Hero() {
       {/* Ubicación + contacto + CTA */}
       <div id="contact" className="space-y-6 scroll-mt-24">
         <div>
-          <h4 className="font-medium">Ubicación</h4>
+          <p className="font-medium">Ubicación</p>
           <p className="text-[var(--muted)]">Colombia 🇨🇴</p>
         </div>
 
