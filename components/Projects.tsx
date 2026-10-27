@@ -2,6 +2,14 @@ import ProyectCard from "./ProyectCard";
 
 const myProjects = [
   {
+    title: "Ecolex — Asistente de IA para cumplimiento ambiental ESG",
+    description: "Plataforma SaaS multi-tenant con un agente conversacional RAG que responde preguntas sobre normativa ambiental colombiana citando la fuente exacta. Diseñé el backend en FastAPI con PostgreSQL/pgvector, el pipeline de ingesta de PDFs nativos y escaneados (OCR multimodal) y una sincronización automática con las publicaciones oficiales del Ministerio de Ambiente. El corpus creció de 7 normas curadas a 322 documentos y 36.001 fragmentos vectorizados, con un costo medido de centavos de dólar por consulta. Desplegado con Docker en Oracle Cloud, Next.js en Vercel y TLS automático con Caddy. Proyecto de grado, Universidad EAN (2026).",
+    tech: ["FastAPI", "Python", "PostgreSQL", "pgvector", "RAG", "OpenRouter", "Next.js", "TypeScript", "Docker", "Caddy", "Oracle Cloud", "Vercel"],
+    link: "https://github.com/carlosh1016/Enviroment-agent",
+    productionLink: "https://enviroment-agent.vercel.app/",
+    image: "/images/project-ecolex.svg"
+  },
+  {
     title: "Inspirate Inventory",
     description: "Sistema de inventario web para una perfumería familiar en Colombia que mezcla fragancias con alcohol en diferentes presentaciones. Backend en Go con más de 75 endpoints, control de stock transaccional, y descuentos automatizados. Frontend en Next.js 16 con React 19, TanStack Query y shadcn/ui, soportando dos roles de usuario. Infraestructura en Supabase, Oracle Cloud y Vercel.",
     tech: ["Go", "Chi", "Next.js", "React 19", "TypeScript", "PostgreSQL", "Tailwind CSS", "TanStack Query", "Zustand", "shadcn/ui"],
