@@ -15,7 +15,7 @@ const myProjects: Project[] = [
     tech: ["Python", "FastAPI", "PostgreSQL + pgvector", "RAG", "Docker", "Oracle Cloud"],
     link: "https://github.com/carlosh1016/Enviroment-agent",
     productionLink: "https://enviroment-agent.vercel.app/",
-    image: "/images/screenshot-ecolex.png",
+    image: "/images/project-ecolex.svg",
   },
   {
     title: "Inspirate Inventory",

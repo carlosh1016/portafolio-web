@@ -34,10 +34,11 @@ export default function ProjectCard({
       hoverable
       className={`group overflow-hidden flex flex-col ${featured ? "md:flex-row" : ""}`}
     >
+      {/* En el destacado la imagen conserva 16:9 para que no se recorte */}
       {image && (
         <div
           className={`relative aspect-video overflow-hidden bg-white/5 border-b border-white/10 ${
-            featured ? "md:w-1/2 md:aspect-auto md:min-h-80 md:border-b-0 md:border-r" : ""
+            featured ? "md:w-1/2 md:shrink-0 md:self-center md:m-6 md:mr-0 md:rounded-xl md:border" : ""
           }`}
         >
           <Image
@@ -45,14 +46,12 @@ export default function ProjectCard({
             alt={`Vista de ${title}`}
             fill
             sizes={featured ? "(min-width: 768px) 576px, 100vw" : "(min-width: 768px) 50vw, 100vw"}
-            className={`object-cover group-hover:scale-[1.03] transition-transform duration-500 ${
-              featured ? "object-top md:object-left-top" : "object-top"
-            }`}
+            className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
           />
         </div>
       )}
 
-      <div className={`p-6 flex flex-col flex-grow gap-4 ${featured ? "md:p-8 md:w-1/2" : ""}`}>
+      <div className={`p-6 flex flex-col flex-grow gap-4 ${featured ? "md:p-8 md:flex-1" : ""}`}>
         {featured && (
           <span className="text-xs font-semibold uppercase tracking-widest text-[var(--primary)]">
             Proyecto principal

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-label="Ecolex">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Corpus normativo (documentos) -->
+  <g>
+    <rect x="70" y="120" width="150" height="200" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.1"/>
+    <rect x="85" y="105" width="150" height="200" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.12"/>
+    <rect x="100" y="90" width="150" height="200" rx="10" fill="#0f172a" stroke="#22c55e" stroke-opacity="0.45"/>
+    <rect x="120" y="112" width="80" height="12" rx="6" fill="url(#accent)"/>
+    <rect x="120" y="140" width="110" height="8" rx="4" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="120" y="160" width="95" height="8" rx="4" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="120" y="180" width="105" height="8" rx="4" fill="#ffffff" fill-opacity="0.14"/>
+    <!-- fragmento resaltado (chunk citado) -->
+    <rect x="114" y="196" width="122" height="34" rx="6" fill="#2dd4bf" fill-opacity="0.12" stroke="#2dd4bf" stroke-opacity="0.6"/>
+    <rect x="120" y="204" width="100" height="7" rx="3.5" fill="#2dd4bf" fill-opacity="0.7"/>
+    <rect x="120" y="216" width="80" height="7" rx="3.5" fill="#2dd4bf" fill-opacity="0.5"/>
+    <rect x="120" y="244" width="100" height="8" rx="4" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="120" y="264" width="70" height="8" rx="4" fill="#ffffff" fill-opacity="0.14"/>
+  </g>
+
+  <!-- Hoja (ambiental) -->
+  <path d="M160 360 C160 330 185 315 215 318 C212 348 190 362 160 360 Z" fill="#22c55e" fill-opacity="0.8"/>
+  <path d="M160 360 L200 328" stroke="#020617" stroke-width="2"/>
+
+  <!-- Embeddings / pgvector -->
+  <g fill="#2dd4bf">
+    <circle cx="300" cy="170" r="4" fill-opacity="0.5"/>
+    <circle cx="322" cy="198" r="5" fill-opacity="0.8"/>
+    <circle cx="292" cy="222" r="3" fill-opacity="0.4"/>
+    <circle cx="335" cy="240" r="4" fill-opacity="0.6"/>
+    <circle cx="310" cy="262" r="3" fill-opacity="0.4"/>
+  </g>
+  <g stroke="url(#accent)" stroke-width="4" fill="none">
+    <line x1="350" y1="225" x2="420" y2="225"/>
+    <polyline points="402,209 422,225 402,241"/>
+  </g>
+  <text x="386" y="200" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#2dd4bf" font-weight="bold">RAG</text>
+
+  <!-- Chat del agente -->
+  <g>
+    <rect x="450" y="70" width="290" height="310" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#2dd4bf" stroke-opacity="0.35"/>
+    <!-- pregunta del usuario -->
+    <rect x="560" y="100" width="160" height="44" rx="12" fill="#ffffff" fill-opacity="0.1"/>
+    <rect x="576" y="114" width="120" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.35"/>
+    <rect x="576" y="127" width="80" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.35"/>
+    <!-- respuesta del agente -->
+    <rect x="470" y="164" width="220" height="110" rx="12" fill="#2dd4bf" fill-opacity="0.1" stroke="#2dd4bf" stroke-opacity="0.3"/>
+    <rect x="486" y="180" width="180" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.3"/>
+    <rect x="486" y="194" width="160" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.3"/>
+    <rect x="486" y="208" width="170" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.3"/>
+    <rect x="486" y="222" width="110" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.3"/>
+    <!-- cita de la fuente -->
+    <rect x="486" y="242" width="96" height="18" rx="9" fill="url(#accent)"/>
+    <text x="534" y="255" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#020617" font-weight="bold">Fuente</text>
+    <!-- input -->
+    <rect x="470" y="326" width="250" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <circle cx="702" cy="343" r="10" fill="url(#accent)"/>
+  </g>
+
+  <text x="400" y="420" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#94a3b8">322 documentos · 36.001 fragmentos vectorizados</text>
+</svg>
