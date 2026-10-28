@@ -57,7 +57,7 @@ export default function Hero() {
 
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--muted)]">
           <span className="inline-flex items-center gap-2">
-            <Briefcase size={16} /> Practicante de Data Engineering en Bodytech
+            <Briefcase size={16} /> Analista de Desarrollo CX en Bodytech
           </span>
           <span className="inline-flex items-center gap-2">
             <MapPin size={16} /> Colombia

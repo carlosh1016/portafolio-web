@@ -3,10 +3,21 @@ import Tag from "./ui/Tag";
 
 const experiences = [
   {
+    role: "Analista de Desarrollo CX",
+    company: "Bodytech Colombia · Experiencia al Cliente",
+    period: "Oct 2026 – Actualidad",
+    current: true,
+    highlights: [
+      "Desarrollo de una aplicación web con backend en Go y PostgreSQL.",
+      "Frontend en React con TypeScript y CSS.",
+    ],
+    stack: ["Go", "PostgreSQL", "React", "TypeScript", "CSS"],
+  },
+  {
     role: "Practicante de Data Engineering",
     company: "Bodytech Colombia · Experiencia al Cliente",
-    period: "Abr 2026 – Actualidad",
-    current: true,
+    period: "Abr 2026 – Oct 2026",
+    current: false,
     highlights: [
       "Automatización de pipelines de datos con Python y n8n, integrados con APIs externas y Google Drive.",
       "Consultas SQL sobre Redshift y PostgreSQL y análisis en Google Colab.",

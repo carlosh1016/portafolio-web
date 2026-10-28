@@ -21,7 +21,7 @@ const skillGroups = [
   },
   {
     title: "Frontend",
-    items: ["Next.js", "React", "Tailwind CSS"],
+    items: ["React", "Next.js", "CSS", "Tailwind CSS"],
   },
   {
     title: "Infraestructura",
