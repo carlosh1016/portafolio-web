@@ -22,14 +22,22 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
         <Card className="md:col-span-3 space-y-4 text-[var(--muted)] leading-relaxed">
           <p>
-            Me enfoco en backend y datos: diseñar APIs, construir pipelines y
-            llevar sistemas a producción. Mi proyecto de grado, Ecolex, me llevó
-            desde la ingesta de documentos y la búsqueda vectorial hasta el
-            despliegue completo en la nube.
+            Soy estudiante de Ingeniería de Sistemas y me enfoco en backend y
+            datos: diseñar APIs, construir pipelines y llevar sistemas a
+            producción. Mi proyecto de grado, Ecolex, me llevó desde la ingesta
+            de documentos y la búsqueda vectorial hasta el despliegue completo
+            en la nube.
           </p>
           <p>
-            Prefiero soluciones simples y mantenibles, y entender bien los
-            fundamentos antes de sumar complejidad.
+            He trabajado con Go, Java, Node.js, bases de datos relacionales,
+            análisis predictivo y Machine Learning. Me gusta entender cómo
+            funcionan las cosas por dentro, escribir código claro y priorizar
+            soluciones simples y mantenibles, con fundamentos sólidos antes de
+            sumar complejidad.
+          </p>
+          <p>
+            Sigo aprendiendo en áreas cercanas como ciencia de datos, DevOps y
+            seguridad informática, siempre con un enfoque práctico.
           </p>
         </Card>
 
