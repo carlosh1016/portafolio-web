@@ -8,10 +8,9 @@ const experiences = [
     period: "Oct 2026 – Actualidad",
     current: true,
     highlights: [
-      "Desarrollo de una aplicación web con backend en Go y PostgreSQL.",
-      "Frontend en React con TypeScript y CSS.",
+      "Desarrollo del backend de una aplicación web en Go con PostgreSQL.",
     ],
-    stack: ["Go", "PostgreSQL", "React", "TypeScript", "CSS"],
+    stack: ["Go", "PostgreSQL"],
   },
   {
     role: "Practicante de Data Engineering",

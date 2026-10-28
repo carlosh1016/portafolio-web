@@ -5,7 +5,7 @@ import Tag from "./ui/Tag";
 const skillGroups = [
   {
     title: "Lenguajes",
-    items: ["Python", "Go", "SQL", "TypeScript"],
+    items: ["Python", "Go", "SQL"],
   },
   {
     title: "Backend",
@@ -18,10 +18,6 @@ const skillGroups = [
   {
     title: "Datos e IA",
     items: ["RAG", "Embeddings", "OpenRouter", "ETL / Pipelines", "n8n", "Power BI", "Google Colab"],
-  },
-  {
-    title: "Frontend",
-    items: ["React", "Next.js", "CSS", "Tailwind CSS"],
   },
   {
     title: "Infraestructura",
